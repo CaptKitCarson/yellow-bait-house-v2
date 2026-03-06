@@ -1,18 +1,24 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Container from "@/components/container.astro";
+import { Image } from "astro:assets";
+import storeImg from "@/assets/outside_store_and_sign.webp";
 ---
 
 <Layout title="Find Us">
-  <div class="bg-yellow-600 text-white">
-    <Container>
-      <div class="py-16 text-center">
-        <h1 class="text-4xl lg:text-5xl font-bold mb-4">Find Us</h1>
-        <p class="text-xl text-yellow-200 max-w-2xl mx-auto">
-          Right on US-1 in Key Largo. You can't miss the yellow building.
-        </p>
-      </div>
-    </Container>
+  <div class="relative">
+    <Image src={storeImg} alt="The Yellow Bait House storefront and sign" class="absolute inset-0 w-full h-full object-cover" width={1600} height={600} />
+    <div class="absolute inset-0 bg-yellow-800/70"></div>
+    <div class="relative">
+      <Container>
+        <div class="py-16 text-center text-white">
+          <h1 class="text-4xl lg:text-5xl font-bold mb-4">Find Us</h1>
+          <p class="text-xl text-yellow-200 max-w-2xl mx-auto">
+            Right on US-1 in Key Largo. You can't miss the yellow building.
+          </p>
+        </div>
+      </Container>
+    </div>
   </div>
 
   <Container>

@@ -1,24 +1,33 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Container from "@/components/container.astro";
+import { Image } from "astro:assets";
+import storeImg from "@/assets/outside_store.webp";
+import permitImg from "@/assets/permit.jpg";
+import mahiImg from "@/assets/mahi.jpg";
 ---
 
 <Layout title="About Us">
-  <div class="bg-yellow-600 text-white">
-    <Container>
-      <div class="py-16 text-center">
-        <h1 class="text-4xl lg:text-5xl font-bold mb-4">About The Yellow Bait House</h1>
-        <p class="text-xl text-yellow-200 max-w-2xl mx-auto">
-          A must-see when visiting Key Largo. More than a bait shop — it's a Keys institution.
-        </p>
-      </div>
-    </Container>
+  <div class="relative">
+    <Image src={storeImg} alt="The Yellow Bait House storefront" class="absolute inset-0 w-full h-full object-cover" width={1600} height={600} />
+    <div class="absolute inset-0 bg-yellow-800/70"></div>
+    <div class="relative">
+      <Container>
+        <div class="py-16 text-center text-white">
+          <h1 class="text-4xl lg:text-5xl font-bold mb-4">About The Yellow Bait House</h1>
+          <p class="text-xl text-yellow-200 max-w-2xl mx-auto">
+            A must-see when visiting Key Largo. More than a bait shop — it's a Keys institution.
+          </p>
+        </div>
+      </Container>
+    </div>
   </div>
 
   <Container>
     <div class="py-12 lg:py-20">
-      <!-- Story -->
-      <div class="max-w-3xl mx-auto mb-20">
+      <!-- Story with images -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 items-center">
+      <div>
         <h2 class="text-3xl font-bold text-yellow-700 mb-6">Our Story</h2>
         <p class="text-stone-600 leading-relaxed mb-6">
           The Yellow Bait House has been a fixture on US-1 in Key Largo for as long as most
@@ -38,6 +47,11 @@ import Container from "@/components/container.astro";
           their first time seeing a live bait tank — because it might be. That's the Yellow
           Bait House way.
         </p>
+      </div>
+      <div class="space-y-4">
+        <Image src={permitImg} alt="Angler with permit caught in Key Largo" class="rounded-2xl shadow-lg w-full object-cover" width={700} height={400} />
+        <Image src={mahiImg} alt="Happy anglers with mahi-mahi haul" class="rounded-2xl shadow-lg w-full object-cover" width={700} height={400} />
+      </div>
       </div>
 
       <!-- Values -->

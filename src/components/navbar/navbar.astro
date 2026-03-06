@@ -1,6 +1,8 @@
 ---
 import Container from "@/components/container.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Image } from "astro:assets";
+import logo from "@/assets/logo.jpg";
 
 const menuitems = [
   { title: "Home", path: "/" },
@@ -16,11 +18,11 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="flex items-center gap-2">
-          <span class="text-3xl">🎣</span>
+        <a href="/" class="flex items-center gap-3">
+          <Image src={logo} alt="The Yellow Bait House Logo" width={50} height={50} class="rounded" />
           <div>
             <span class="font-bold text-yellow-700 text-lg leading-tight block">The Yellow Bait House</span>
-            <span class="text-stone-500 text-xs hidden sm:block">Key Largo, FL</span>
+            <span class="text-stone-500 text-xs hidden sm:block">Key Largo, FL · MM 101</span>
           </div>
         </a>
         <div class="block lg:hidden">
@@ -45,9 +47,7 @@ const menuitems = [
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a
-          href="tel:+13054510921"
-          class="flex items-center gap-2 bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 transition-colors font-medium">
+        <a href="tel:+13054510921" class="flex items-center gap-2 bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 transition-colors font-medium">
           📞 (305) 451-0921
         </a>
       </div>
