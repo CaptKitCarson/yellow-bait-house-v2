@@ -9,45 +9,39 @@ import storeInteriorImg from "@/assets/store.jpg";
 ---
 
 <Layout title="Bait & Tackle">
-  <div class="relative">
-    <Image src={storeImg} alt="The Yellow Bait House exterior" class="absolute inset-0 w-full h-full object-cover" width={1600} height={600} />
-    <div class="absolute inset-0 bg-yellow-800/70"></div>
-    <div class="relative">
+  <!-- Page header - bold left-aligned -->
+  <div class="relative h-64">
+    <Image src={storeImg} alt="The Yellow Bait House exterior" class="absolute inset-0 w-full h-full object-cover" width={1600} height={400} />
+    <div class="absolute inset-0 bg-gradient-to-r from-[#3D2E1C]/90 to-[#3D2E1C]/50 flex items-end">
       <Container>
-        <div class="py-16 text-center text-white">
-          <h1 class="text-4xl lg:text-5xl font-bold mb-4">Bait & Tackle</h1>
-          <p class="text-xl text-yellow-200 max-w-2xl mx-auto">
-            Everything you need to get on the water. Live bait, frozen bait, full tackle shop,
-            rod repairs, and gear rentals.
-          </p>
+        <div class="pb-8">
+          <span class="text-[#F5C518] text-xs font-bold uppercase tracking-widest">Shop</span>
+          <h1 class="text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">Bait & Tackle</h1>
         </div>
       </Container>
     </div>
   </div>
 
-  <div class="bg-yellow-100 border-b border-yellow-200">
+  <div class="bg-[#F5C518]">
     <Container>
-      <p class="py-3 text-center text-yellow-800 font-medium">
-        💰 Prices vary with availability. Call <a href="tel:+13054510921" class="underline font-bold">(305) 451-0921</a> for current pricing.
+      <p class="py-3 text-center text-[#3D2E1C] font-bold text-sm uppercase tracking-wide">
+        Prices vary with availability · Call <a href="tel:+13054510921" class="underline">(305) 451-0921</a> for current pricing
       </p>
     </Container>
   </div>
 
   <Container>
-    <div class="py-12 lg:py-20">
-      <!-- Live Bait with image -->
+    <div class="py-12 lg:py-16">
+      <!-- Live Bait -->
       <section class="mb-16">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           <div class="lg:col-span-2">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="text-3xl">🦐</span>
-              <h2 class="text-3xl font-bold text-yellow-700">Live Bait</h2>
-            </div>
+            <h2 class="text-2xl font-black text-[#3D2E1C] uppercase tracking-tight mb-1">Live Bait</h2>
+            <div class="h-1 w-16 bg-[#C41E24] mb-6"></div>
             <p class="text-stone-600 mb-6">
-              Quality live bait housed in aerated tanks. Staff will show you around — even
-              give your kids a tour of the tanks.
+              Quality live bait housed in aerated tanks. Staff will show you around — even give your kids a tour.
             </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 { name: "Live Shrimp", note: "The bread and butter of Keys fishing" },
                 { name: "Live Pilchards", note: "Silver bullets — irresistible to game fish" },
@@ -56,31 +50,29 @@ import storeInteriorImg from "@/assets/store.jpg";
                 { name: "Live Crabs", note: "Permit & tarpon bait" },
                 { name: "Live Ballyhoo", note: "When available — call ahead" },
               ].map(item => (
-                <div class="bg-white border border-stone-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-                  <h3 class="font-bold text-yellow-700 text-lg">{item.name}</h3>
-                  <p class="text-stone-500 text-sm mt-1">{item.note}</p>
+                <div class="bg-white border-l-4 border-[#F5C518] p-4 hover:border-[#C41E24] transition-colors">
+                  <h3 class="font-bold text-[#3D2E1C]">{item.name}</h3>
+                  <p class="text-stone-500 text-sm">{item.note}</p>
                 </div>
               ))}
             </div>
           </div>
           <div class="hidden lg:block">
-            <Image src={mulletImg} alt="Fresh mullet on ice" class="rounded-2xl w-full object-cover shadow-md" width={500} height={600} />
+            <Image src={mulletImg} alt="Fresh mullet on ice" class="rounded-lg w-full object-cover shadow-lg" width={500} height={600} />
           </div>
         </div>
       </section>
 
-      <!-- Frozen Bait with image -->
+      <!-- Frozen Bait -->
       <section class="mb-16">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           <div class="hidden lg:block">
-            <Image src={ballyhooImg} alt="Fresh ballyhoo on ice" class="rounded-2xl w-full object-cover shadow-md" width={500} height={600} />
+            <Image src={ballyhooImg} alt="Fresh ballyhoo on ice" class="rounded-lg w-full object-cover shadow-lg" width={500} height={600} />
           </div>
           <div class="lg:col-span-2">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="text-3xl">🧊</span>
-              <h2 class="text-3xl font-bold text-yellow-700">Frozen Bait</h2>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <h2 class="text-2xl font-black text-[#3D2E1C] uppercase tracking-tight mb-1">Frozen Bait</h2>
+            <div class="h-1 w-16 bg-[#C41E24] mb-6"></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 { name: "Frozen Shrimp", note: "Always available" },
                 { name: "Ballyhoo", note: "Whole & rigged" },
@@ -89,9 +81,9 @@ import storeInteriorImg from "@/assets/store.jpg";
                 { name: "Cut Bait", note: "Ready to fish" },
                 { name: "Cigar Minnows", note: "Trolling & bottom fishing" },
               ].map(item => (
-                <div class="bg-white border border-stone-200 rounded-xl p-5 hover:border-yellow-400 transition-colors">
-                  <h3 class="font-bold text-yellow-700 text-lg">{item.name}</h3>
-                  <p class="text-stone-500 text-sm mt-1">{item.note}</p>
+                <div class="bg-white border-l-4 border-[#F5C518] p-4 hover:border-[#C41E24] transition-colors">
+                  <h3 class="font-bold text-[#3D2E1C]">{item.name}</h3>
+                  <p class="text-stone-500 text-sm">{item.note}</p>
                 </div>
               ))}
             </div>
@@ -99,45 +91,46 @@ import storeInteriorImg from "@/assets/store.jpg";
         </div>
       </section>
 
-      <!-- Tackle & Services with image -->
+      <!-- Tackle & Services -->
       <section class="mb-16">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <div class="flex items-center gap-3 mb-6">
-              <span class="text-3xl">🎣</span>
-              <h2 class="text-3xl font-bold text-yellow-700">Tackle & Services</h2>
-            </div>
-            <div class="grid grid-cols-2 gap-3 mb-6">
+            <h2 class="text-2xl font-black text-[#3D2E1C] uppercase tracking-tight mb-1">Tackle & Services</h2>
+            <div class="h-1 w-16 bg-[#C41E24] mb-6"></div>
+            <div class="grid grid-cols-2 gap-2 mb-6">
               {["Hooks & Rigs", "Weights & Sinkers", "Leader Material", "Fishing Line", "Lures & Jigs", "Nets & Gaffs", "Coolers & Buckets", "Souvenirs & Gifts"].map(item => (
-                <div class="bg-yellow-50 border border-yellow-100 rounded-xl p-3 text-center">
-                  <span class="font-semibold text-yellow-800 text-sm">{item}</span>
+                <div class="bg-[#F5C518]/20 border border-[#F5C518]/40 p-3 text-center rounded">
+                  <span class="font-bold text-[#3D2E1C] text-sm">{item}</span>
                 </div>
               ))}
             </div>
-            <div class="space-y-4">
-              <div class="bg-white border border-stone-200 rounded-xl p-5">
-                <h4 class="font-bold text-yellow-700 flex items-center gap-2">🔧 Rod Repairs</h4>
-                <p class="text-stone-500 text-sm mt-1">Broken tip? Snapped guide? We fix rods on-site.</p>
+            <div class="space-y-3">
+              <div class="bg-[#3D2E1C] text-white rounded-lg p-5">
+                <h4 class="font-bold text-[#F5C518]">🔧 Rod Repairs</h4>
+                <p class="text-stone-300 text-sm mt-1">Broken tip? Snapped guide? Fixed on-site.</p>
               </div>
-              <div class="bg-white border border-stone-200 rounded-xl p-5">
-                <h4 class="font-bold text-yellow-700 flex items-center gap-2">🎣 Rod & Reel Rentals</h4>
-                <p class="text-stone-500 text-sm mt-1">Don't own gear? Rent a full setup and fish the bridges or the reef.</p>
+              <div class="bg-[#3D2E1C] text-white rounded-lg p-5">
+                <h4 class="font-bold text-[#F5C518]">🎣 Rod & Reel Rentals</h4>
+                <p class="text-stone-300 text-sm mt-1">No gear? No problem. Full setups ready to go.</p>
+              </div>
+              <div class="bg-[#3D2E1C] text-white rounded-lg p-5">
+                <h4 class="font-bold text-[#F5C518]">🧠 Local Intel</h4>
+                <p class="text-stone-300 text-sm mt-1">We know what's biting and where. Just ask.</p>
               </div>
             </div>
           </div>
           <div class="hidden md:block">
-            <Image src={storeInteriorImg} alt="Inside The Yellow Bait House" class="rounded-2xl w-full object-cover shadow-md h-full" width={700} height={800} />
+            <Image src={storeInteriorImg} alt="Inside The Yellow Bait House" class="rounded-lg w-full object-cover shadow-lg h-full" width={700} height={800} />
           </div>
         </div>
       </section>
 
-      <div class="bg-yellow-600 text-white rounded-2xl p-8 lg:p-12 text-center">
-        <h2 class="text-2xl lg:text-3xl font-bold mb-3">Need Gear Advice?</h2>
-        <p class="text-yellow-200 text-lg mb-6 max-w-xl mx-auto">
-          Call us or stop by. We'll get you dialed in for whatever you're targeting.
-        </p>
-        <a href="tel:+13054510921" class="inline-block bg-white text-yellow-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-50 transition-colors">
-          📞 (305) 451-0921
+      <!-- CTA -->
+      <div class="bg-[#C41E24] text-white rounded-lg p-8 lg:p-12 text-center">
+        <h2 class="text-2xl lg:text-3xl font-black uppercase mb-3">Need Gear Advice?</h2>
+        <p class="text-red-200 text-lg mb-6">Call us or just walk in. We'll get you dialed in.</p>
+        <a href="tel:+13054510921" class="inline-block bg-white text-[#C41E24] px-8 py-4 rounded-md font-black text-lg hover:bg-stone-100 transition-colors">
+          📞 305-451-0921
         </a>
       </div>
     </div>

@@ -10,47 +10,49 @@ const menuitems = [
   { title: "Seafood Market", path: "/seafood-market" },
   { title: "Food Menu", path: "/food-menu" },
   { title: "Find Us", path: "/find-us" },
-  { title: "🔴 Dock Cam", path: "/webcam" },
+  { title: "🔴 Live Cam", path: "/webcam" },
 ];
 ---
 
-<Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
-    <Astronav>
-      <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="flex items-center gap-3">
-          <Image src={logo} alt="The Yellow Bait House Logo" width={50} height={50} class="rounded" />
-          <div>
-            <span class="font-bold text-yellow-700 text-lg leading-tight block">The Yellow Bait House</span>
-            <span class="text-stone-500 text-xs hidden sm:block">Key Largo, FL · MM 101</span>
+<div class="bg-[#5C4A32] text-white">
+  <Container>
+    <header class="flex flex-col lg:flex-row justify-between items-center py-3">
+      <Astronav>
+        <div class="flex w-full lg:w-auto items-center justify-between">
+          <a href="/" class="flex items-center gap-3">
+            <Image src={logo} alt="The Yellow Bait House Logo" width={55} height={55} class="rounded-md border-2 border-yellow-400" />
+            <div>
+              <span class="font-bold text-[#F5C518] text-xl leading-tight block tracking-tight">YELLOW BAIT HOUSE</span>
+              <span class="text-stone-300 text-xs block">Key Largo · Mile Marker 101</span>
+            </div>
+          </a>
+          <div class="block lg:hidden">
+            <MenuIcon class="w-4 h-4 text-white" />
           </div>
-        </a>
-        <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+        </div>
+        <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+          <ul class="flex flex-col lg:flex-row lg:gap-1">
+            {
+              menuitems.map((item) => (
+                <li>
+                  <a
+                    href={item.path}
+                    class="flex lg:px-3 py-2 items-center text-stone-300 hover:text-[#F5C518] font-medium transition-colors text-sm uppercase tracking-wide">
+                    <span>{item.title}</span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </MenuItems>
+      </Astronav>
+      <div>
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="tel:+13054510921" class="flex items-center gap-2 bg-[#C41E24] text-white px-5 py-2.5 rounded-md hover:bg-red-700 transition-colors font-bold text-sm tracking-wide">
+            📞 305-451-0921
+          </a>
         </div>
       </div>
-      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <ul class="flex flex-col lg:flex-row lg:gap-3">
-          {
-            menuitems.map((item) => (
-              <li>
-                <a
-                  href={item.path}
-                  class="flex lg:px-3 py-2 items-center text-stone-600 hover:text-yellow-700 font-medium transition-colors">
-                  <span>{item.title}</span>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </MenuItems>
-    </Astronav>
-    <div>
-      <div class="hidden lg:flex items-center gap-4">
-        <a href="tel:+13054510921" class="flex items-center gap-2 bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 transition-colors font-medium">
-          📞 (305) 451-0921
-        </a>
-      </div>
-    </div>
-  </header>
-</Container>
+    </header>
+  </Container>
+</div>

@@ -8,157 +8,152 @@ import mahisImg from "@/assets/mahiswithsign.jpg";
 import lobstersImg from "@/assets/lobsters.jpg";
 import baitairImg from "@/assets/baitair.jpg";
 import mangrovesImg from "@/assets/mangroves.jpg";
+import permitImg from "@/assets/permit.jpg";
 ---
 
 <Layout title="Key Largo's Favorite Bait Shop & Seafood Market">
-  <!-- Hero with store photo -->
-  <div class="relative">
-    <Image src={heroImg} alt="The Yellow Bait House storefront in Key Largo" class="absolute inset-0 w-full h-full object-cover" width={1600} height={900} />
-    <div class="absolute inset-0 bg-yellow-900/70"></div>
-    <div class="relative">
-      <Container>
-        <div class="py-24 lg:py-36 text-center text-white">
-          <p class="text-yellow-200 text-sm font-medium uppercase tracking-widest mb-4">
-            Key Largo, Florida Keys · Mile Marker 101
-          </p>
-          <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-            The Yellow<br />
-            <span class="text-yellow-300">Bait House</span>
+  <!-- Hero - split layout, not centered -->
+  <div class="bg-[#F5C518]">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
+        <div class="flex flex-col justify-center px-6 lg:px-16 py-16">
+          <span class="text-[#C41E24] text-sm font-bold uppercase tracking-widest mb-3">Mile Marker 101 · Key Largo</span>
+          <h1 class="text-5xl lg:text-7xl font-black text-[#3D2E1C] leading-none mb-6">
+            THE<br />YELLOW<br />BAIT HOUSE
           </h1>
-          <p class="text-xl text-yellow-100 max-w-2xl mx-auto mb-8 leading-relaxed">
-            A must-see when visiting Key Largo. Live bait, tackle, rod repairs & rentals,
-            fresh local seafood, and a food menu that'll keep you coming back.
+          <p class="text-[#5C4A32] text-lg max-w-md mb-8 leading-relaxed">
+            Live bait. Tackle. Rod repairs. Fresh local seafood. Food menu.
+            Everything you need under one bright yellow roof.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+13054510921" class="bg-white text-yellow-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-50 transition-colors">
-              📞 (305) 451-0921
+          <div class="flex flex-wrap gap-3">
+            <a href="tel:+13054510921" class="bg-[#C41E24] text-white px-6 py-3 rounded-md font-bold hover:bg-red-700 transition-colors">
+              📞 305-451-0921
             </a>
-            <a href="/find-us" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors">
-              📍 Get Directions
+            <a href="/find-us" class="bg-[#3D2E1C] text-white px-6 py-3 rounded-md font-bold hover:bg-[#5C4A32] transition-colors">
+              📍 Directions
             </a>
           </div>
         </div>
-      </Container>
+        <div class="relative hidden lg:block">
+          <Image src={heroImg} alt="The Yellow Bait House storefront" class="absolute inset-0 w-full h-full object-cover" width={900} height={600} />
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Hours Banner -->
-  <div class="bg-yellow-500 text-yellow-950">
+  <!-- Ticker-style hours bar -->
+  <div class="bg-[#C41E24] text-white overflow-hidden">
+    <div class="py-3 flex items-center justify-center gap-8 text-sm font-bold uppercase tracking-wider">
+      <span>🕐 Open Daily from 6AM</span>
+      <span class="text-red-300">★</span>
+      <span>📍 101741 Overseas Hwy</span>
+      <span class="text-red-300">★</span>
+      <span>🔧 Rod Repairs & Rentals</span>
+      <span class="text-red-300">★</span>
+      <span>🐟 Fresh Local Seafood</span>
+    </div>
+  </div>
+
+  <!-- What We Got - horizontal scroll cards feel -->
+  <Container>
+    <div class="py-16 lg:py-20">
+      <h2 class="text-3xl font-black text-[#3D2E1C] uppercase tracking-tight mb-2">What We Got</h2>
+      <div class="h-1 w-20 bg-[#C41E24] mb-10"></div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Big card - Live Bait -->
+        <a href="/bait-and-tackle" class="group relative rounded-xl overflow-hidden h-72">
+          <Image src={baitairImg} alt="Yellow Bait House branded bait buckets" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width={800} height={500} />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6">
+            <span class="text-[#F5C518] text-xs font-bold uppercase tracking-widest">Shop</span>
+            <h3 class="text-white text-2xl font-black">LIVE BAIT & TACKLE</h3>
+            <p class="text-stone-300 text-sm mt-1">Shrimp, pilchards, pinfish, mullet & full tackle shop →</p>
+          </div>
+        </a>
+
+        <!-- Big card - Seafood -->
+        <a href="/seafood-market" class="group relative rounded-xl overflow-hidden h-72">
+          <Image src={lobstersImg} alt="Fresh Florida spiny lobster on ice" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width={800} height={500} />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6">
+            <span class="text-[#F5C518] text-xs font-bold uppercase tracking-widest">Market</span>
+            <h3 class="text-white text-2xl font-black">FRESH LOCAL SEAFOOD</h3>
+            <p class="text-stone-300 text-sm mt-1">Stone crab, lobster, fresh fish — locally caught only →</p>
+          </div>
+        </a>
+
+        <!-- Big card - Food -->
+        <a href="/food-menu" class="group relative rounded-xl overflow-hidden h-72">
+          <Image src={mangrovesImg} alt="Fresh catch on ice" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width={800} height={500} />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6">
+            <span class="text-[#F5C518] text-xs font-bold uppercase tracking-widest">Eat</span>
+            <h3 class="text-white text-2xl font-black">FOOD MENU</h3>
+            <p class="text-stone-300 text-sm mt-1">Fish tacos, poke bowls, island flavors →</p>
+          </div>
+        </a>
+
+        <!-- Big card - Catches -->
+        <a href="/bait-and-tackle" class="group relative rounded-xl overflow-hidden h-72">
+          <Image src={mahisImg} alt="Happy anglers with mahi-mahi" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width={800} height={500} />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6">
+            <span class="text-[#F5C518] text-xs font-bold uppercase tracking-widest">Gear Up</span>
+            <h3 class="text-white text-2xl font-black">ROD REPAIRS & RENTALS</h3>
+            <p class="text-stone-300 text-sm mt-1">Don't own gear? We'll get you fishing today →</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </Container>
+
+  <!-- Why section - dark rustic block -->
+  <div class="bg-[#3D2E1C] text-white">
     <Container>
-      <div class="py-4 text-center font-semibold flex flex-col sm:flex-row items-center justify-center gap-4 text-lg">
-        <span>🕐 Open Daily from 6AM</span>
-        <span class="hidden sm:inline">·</span>
-        <span>📍 101741 Overseas Hwy, Key Largo</span>
-        <span class="hidden sm:inline">·</span>
-        <span>🎣 Rod Repairs & Rentals</span>
+      <div class="py-16 lg:py-20">
+        <h2 class="text-3xl font-black uppercase tracking-tight mb-2">Why Everyone Stops Here</h2>
+        <div class="h-1 w-20 bg-[#C41E24] mb-10"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="border border-stone-600 rounded-lg p-6">
+            <span class="text-[#F5C518] text-3xl font-black block mb-2">137+</span>
+            <h3 class="text-white font-bold mb-1">5-Star Reviews</h3>
+            <p class="text-stone-400 text-sm">"Best bait and tackle in the Upper Keys"</p>
+          </div>
+          <div class="border border-stone-600 rounded-lg p-6">
+            <span class="text-[#F5C518] text-3xl font-black block mb-2">6AM</span>
+            <h3 class="text-white font-bold mb-1">We Open Early</h3>
+            <p class="text-stone-400 text-sm">Beat the crowds. Get the best bait. Fish first light.</p>
+          </div>
+          <div class="border border-stone-600 rounded-lg p-6">
+            <span class="text-[#F5C518] text-3xl font-black block mb-2">100%</span>
+            <h3 class="text-white font-bold mb-1">Local Seafood</h3>
+            <p class="text-stone-400 text-sm">No imports. Only fish caught by Keys fishermen.</p>
+          </div>
+          <div class="border border-stone-600 rounded-lg p-6">
+            <span class="text-[#F5C518] text-3xl font-black block mb-2">MM 101</span>
+            <h3 class="text-white font-bold mb-1">Can't Miss It</h3>
+            <p class="text-stone-400 text-sm">Bright yellow building right on US-1. You'll see it.</p>
+          </div>
+        </div>
       </div>
     </Container>
   </div>
 
-  <!-- Feature Cards with Images -->
-  <Container>
-    <div class="py-16 lg:py-24">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <a href="/bait-and-tackle" class="bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200 hover:shadow-md hover:border-yellow-300 transition-all group">
-          <Image src={baitairImg} alt="Yellow Bait House branded bait buckets with air pumps" class="w-full h-40 object-cover" width={400} height={250} />
-          <div class="p-5">
-            <h2 class="text-xl font-bold text-yellow-700 mb-2 group-hover:text-yellow-800">Live Bait</h2>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              Shrimp, pilchards, pinfish, mullet & more. Quality bait from aerated tanks.
-            </p>
-          </div>
-        </a>
-        <a href="/bait-and-tackle" class="bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200 hover:shadow-md hover:border-yellow-300 transition-all group">
-          <Image src={mahisImg} alt="Happy anglers with mahi-mahi at The Yellow Bait House" class="w-full h-40 object-cover" width={400} height={250} />
-          <div class="p-5">
-            <h2 class="text-xl font-bold text-yellow-700 mb-2 group-hover:text-yellow-800">Tackle & Rentals</h2>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              Full tackle shop plus rod repairs and gear rentals. We'll set you up.
-            </p>
-          </div>
-        </a>
-        <a href="/seafood-market" class="bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200 hover:shadow-md hover:border-yellow-300 transition-all group">
-          <Image src={lobstersImg} alt="Fresh Florida spiny lobster on ice" class="w-full h-40 object-cover" width={400} height={250} />
-          <div class="p-5">
-            <h2 class="text-xl font-bold text-yellow-700 mb-2 group-hover:text-yellow-800">Seafood Market</h2>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              100% locally caught. Stone crab, lobster, fresh fish — best prices in the Keys.
-            </p>
-          </div>
-        </a>
-        <a href="/food-menu" class="bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200 hover:shadow-md hover:border-yellow-300 transition-all group">
-          <Image src={mangrovesImg} alt="Fresh catch on ice at The Yellow Bait House" class="w-full h-40 object-cover" width={400} height={250} />
-          <div class="p-5">
-            <h2 class="text-xl font-bold text-yellow-700 mb-2 group-hover:text-yellow-800">Food Menu</h2>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              Fresh seafood dishes, island flavors, and cold drinks. Eat here or take it to the boat.
-            </p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </Container>
-
-  <!-- Why Yellow Bait House with background -->
-  <div class="relative">
-    <Image src={storeSignImg} alt="The Yellow Bait House sign and storefront" class="absolute inset-0 w-full h-full object-cover" width={1600} height={900} />
-    <div class="absolute inset-0 bg-yellow-900/85"></div>
-    <div class="relative">
+  <!-- Customer catch banner -->
+  <div class="relative h-80">
+    <Image src={permitImg} alt="Angler with permit caught in Key Largo" class="absolute inset-0 w-full h-full object-cover" width={1600} height={500} />
+    <div class="absolute inset-0 bg-gradient-to-r from-[#3D2E1C]/90 to-transparent flex items-center">
       <Container>
-        <div class="py-16 lg:py-24">
-          <h2 class="text-3xl lg:text-4xl font-bold text-center text-white mb-12">
-            Why The Yellow Bait House?
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div class="flex gap-4">
-              <div class="text-3xl shrink-0">⭐</div>
-              <div>
-                <h3 class="font-bold text-lg text-yellow-300 mb-1">Best in the Upper Keys</h3>
-                <p class="text-yellow-100">"The best bait and tackle in the upper keys, and the best fish market as well" — straight from our customers.</p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="text-3xl shrink-0">🔧</div>
-              <div>
-                <h3 class="font-bold text-lg text-yellow-300 mb-1">Rod Repairs & Rentals</h3>
-                <p class="text-yellow-100">Broken rod? Don't own gear? We fix rods and rent full setups so you never miss a day on the water.</p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="text-3xl shrink-0">🐟</div>
-              <div>
-                <h3 class="font-bold text-lg text-yellow-300 mb-1">Only Local Seafood</h3>
-                <p class="text-yellow-100">Our seafood market sells exclusively locally caught fish. Best prices in the Keys — no imports.</p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="text-3xl shrink-0">👨‍👩‍👧‍👦</div>
-              <div>
-                <h3 class="font-bold text-lg text-yellow-300 mb-1">Family-Friendly</h3>
-                <p class="text-yellow-100">Bring the kids for a tour of the live bait tanks. Knowledgeable staff from first-timers to pros.</p>
-              </div>
-            </div>
-          </div>
+        <div class="max-w-md">
+          <h2 class="text-white text-3xl font-black uppercase mb-3">Gear Up.<br />Get Out There.</h2>
+          <p class="text-stone-300 mb-6">Our staff knows what's biting, where, and on what. Stop in before you hit the water.</p>
+          <a href="tel:+13054510921" class="inline-block bg-[#C41E24] text-white px-6 py-3 rounded-md font-bold hover:bg-red-700 transition-colors">
+            📞 305-451-0921
+          </a>
         </div>
       </Container>
     </div>
   </div>
-
-  <!-- CTA -->
-  <Container>
-    <div class="py-16 lg:py-24 text-center">
-      <h2 class="text-3xl font-bold text-yellow-800 mb-4">Stop By Today</h2>
-      <p class="text-xl text-stone-600 mb-8 max-w-xl mx-auto">
-        Right on US-1 in Key Largo. Easy to find, hard to forget.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="tel:+13054510921" class="bg-yellow-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-700 transition-colors">
-          📞 (305) 451-0921
-        </a>
-        <a href="/find-us" class="bg-stone-200 text-stone-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-stone-300 transition-colors">
-          📍 Directions
-        </a>
-      </div>
-    </div>
-  </Container>
 </Layout>
