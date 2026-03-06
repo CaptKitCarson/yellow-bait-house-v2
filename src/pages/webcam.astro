@@ -1,0 +1,81 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Container from "@/components/container.astro";
+---
+
+<Layout title="Live Cam">
+  <div class="bg-yellow-600 text-white">
+    <Container>
+      <div class="py-12 text-center">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+          </span>
+          <span class="text-sm font-medium text-yellow-200 uppercase tracking-widest">Live 24/7</span>
+        </div>
+        <h1 class="text-4xl lg:text-5xl font-bold mb-4">Live Cam</h1>
+        <p class="text-xl text-yellow-200 max-w-2xl mx-auto">
+          Live view from The Yellow Bait House in Key Largo, Florida Keys.
+        </p>
+      </div>
+    </Container>
+  </div>
+
+  <Container>
+    <div class="py-12 lg:py-16">
+      <div class="max-w-4xl mx-auto mb-12">
+        <div class="bg-stone-900 rounded-2xl overflow-hidden shadow-xl aspect-video flex items-center justify-center relative">
+          <div class="text-center text-stone-400 p-8">
+            <div class="text-6xl mb-4">📹</div>
+            <p class="text-2xl font-bold text-stone-300 mb-2">Live Cam</p>
+            <p class="text-stone-500">Coming Soon</p>
+            <p class="text-stone-600 text-sm mt-4 max-w-md mx-auto">
+              We're setting up a 24/7 live camera at The Yellow Bait House.
+              Check back soon to see the action on US-1 in Key Largo.
+            </p>
+          </div>
+          <!-- WEBCAM EMBED GOES HERE -->
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between bg-stone-100 rounded-b-2xl px-6 py-3 -mt-1 text-sm text-stone-600">
+          <span>📍 101741 Overseas Hwy, Key Largo FL</span>
+          <span>🔄 Refreshes automatically</span>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-yellow-700 mb-6 text-center">What You'll See</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="bg-white border border-stone-200 rounded-xl p-6 text-center">
+            <div class="text-3xl mb-3">🌤️</div>
+            <h3 class="font-bold text-yellow-700 mb-1">Key Largo Weather</h3>
+            <p class="text-stone-500 text-sm">Check conditions before you make the drive down</p>
+          </div>
+          <div class="bg-white border border-stone-200 rounded-xl p-6 text-center">
+            <div class="text-3xl mb-3">🎣</div>
+            <h3 class="font-bold text-yellow-700 mb-1">Shop Activity</h3>
+            <p class="text-stone-500 text-sm">See the action at Key Largo's busiest bait shop</p>
+          </div>
+          <div class="bg-white border border-stone-200 rounded-xl p-6 text-center">
+            <div class="text-3xl mb-3">🌅</div>
+            <h3 class="font-bold text-yellow-700 mb-1">Keys Vibes</h3>
+            <p class="text-stone-500 text-sm">Soak up the Florida Keys from anywhere in the world</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto mt-12 bg-yellow-600 text-white rounded-2xl p-8 text-center">
+        <h2 class="text-2xl font-bold mb-3">Like What You See?</h2>
+        <p class="text-yellow-200 mb-6">Come visit in person. We're open daily from 6AM.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+13054510921" class="bg-white text-yellow-700 px-6 py-3 rounded-lg font-bold hover:bg-yellow-50 transition-colors">
+            📞 (305) 451-0921
+          </a>
+          <a href="/find-us" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">
+            📍 Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>

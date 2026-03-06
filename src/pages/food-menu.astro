@@ -1,0 +1,109 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Container from "@/components/container.astro";
+---
+
+<Layout title="Food Menu">
+  <div class="bg-yellow-600 text-white">
+    <Container>
+      <div class="py-16 text-center">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-4">Food Menu</h1>
+        <p class="text-xl text-yellow-200 max-w-2xl mx-auto">
+          More than just a bait shop. Grab a bite before you hit the water
+          or refuel after a day of fishing.
+        </p>
+      </div>
+    </Container>
+  </div>
+
+  <Container>
+    <div class="py-12 lg:py-20">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <p class="text-lg text-stone-600 leading-relaxed">
+          We're rolling out a fresh food menu with island-inspired flavors and fresh seafood dishes.
+          Call <a href="tel:+13054510921" class="text-yellow-700 font-semibold underline">(305) 451-0921</a>
+          or stop by to see what's cooking today.
+        </p>
+      </div>
+
+      <!-- Menu Categories -->
+      <div class="max-w-2xl mx-auto space-y-8 mb-16">
+        <div class="bg-white border border-stone-200 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-yellow-700 mb-4 flex items-center gap-2">🐟 Fresh Seafood</h2>
+          <p class="text-stone-600 mb-4">Prepared daily with locally caught fish. Ask what's fresh.</p>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center py-2 border-b border-stone-100">
+              <span class="text-stone-800 font-medium">Fish Sandwich</span>
+              <span class="text-stone-500 text-sm italic">Market price</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-stone-100">
+              <span class="text-stone-800 font-medium">Fish Tacos</span>
+              <span class="text-stone-500 text-sm italic">Market price</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-stone-100">
+              <span class="text-stone-800 font-medium">Shrimp Basket</span>
+              <span class="text-stone-500 text-sm italic">Market price</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <span class="text-stone-800 font-medium">Smoked Fish Dip</span>
+              <span class="text-stone-500 text-sm italic">Market price</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-stone-200 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-yellow-700 mb-4 flex items-center gap-2">🥗 Island Flavors</h2>
+          <p class="text-stone-600 mb-4">Fresh, light, and made for the Keys heat.</p>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center py-2 border-b border-stone-100">
+              <span class="text-stone-800 font-medium">Poke Bowl</span>
+              <span class="text-stone-500 text-sm italic">Market price</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-stone-100">
+              <span class="text-stone-800 font-medium">Maui Bowl</span>
+              <span class="text-stone-500 text-sm italic">Market price</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <span class="text-stone-800 font-medium">Conch Fritters</span>
+              <span class="text-stone-500 text-sm italic">Market price</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-stone-200 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-yellow-700 mb-4 flex items-center gap-2">🥤 Drinks & Sides</h2>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center py-2 border-b border-stone-100">
+              <span class="text-stone-800 font-medium">Cold Drinks</span>
+              <span class="text-stone-500 text-sm italic">Various</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-stone-100">
+              <span class="text-stone-800 font-medium">Water & Gatorade</span>
+              <span class="text-stone-500 text-sm italic">Various</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <span class="text-stone-800 font-medium">Snacks & Chips</span>
+              <span class="text-stone-500 text-sm italic">Various</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-yellow-100 rounded-2xl p-8 text-center max-w-2xl mx-auto mb-16">
+        <p class="text-yellow-800 font-medium">
+          📋 Menu items change regularly. Follow us on
+          <a href="https://www.facebook.com/p/The-Yellow-Bait-House-100057521618227/" target="_blank" class="underline font-bold">Facebook</a>
+          for daily specials and new additions.
+        </p>
+      </div>
+
+      <div class="bg-yellow-600 text-white rounded-2xl p-8 lg:p-12 text-center">
+        <h2 class="text-2xl font-bold mb-3">Hungry?</h2>
+        <p class="text-yellow-200 mb-6">Stop by or call ahead. Eat here or take it to the boat.</p>
+        <a href="tel:+13054510921" class="inline-block bg-white text-yellow-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-50 transition-colors">
+          📞 (305) 451-0921
+        </a>
+      </div>
+    </div>
+  </Container>
+</Layout>
